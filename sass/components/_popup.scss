@@ -26,6 +26,7 @@
     &__left {
         width: 33.3333333%;
         display: table-cell;
+        
     }
 
 
@@ -88,4 +89,55 @@
             transition: all .2s;
         }
     }
+
+
+
+    // @include respond(tab-land) {
+        
+    //     &__right {
+    //         padding: 0 2.5rem;
+    //     }
+    // }
+
+    @include respond(tab-land) {
+        
+        &__left {
+            width: 100%;
+            display: table-row;
+            margin-bottom: 10rem;
+        }
+    
+    
+        &__right {
+            width: 100%;
+            display: table-row;
+            vertical-align: middle;
+            padding: 3rem 0;
+            height: 30rem;
+            text-align: center;
+
+        }
+        @include clearfix;
+        
+        &__img {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 30rem;
+        }
+       
+        &__text {
+            margin-bottom: 2rem;
+            text-align: left;
+            padding: 0 2rem;
+        }
+    
+        //Opem states
+        &:target {
+            opacity: 1;
+            visibility: visible;
+        }
+    
+    }
+
 }
